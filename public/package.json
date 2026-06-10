@@ -1,0 +1,9 @@
+{
+  "name": "ecopoint",
+  "version": "1.0.0",
+  "private": true,
+  "description": "EcoPoint static web app",
+  "scripts": {
+    "build": "node build.js"
+  }
+}

@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <meta name="theme-color" content="#10b981">
+    <title>EcoPoint</title>
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css?v=8">
+</head>
+<body>
+
+    <header class="main-header">
+        <div class="header-brand">
+            <span class="brand-sub"><i class="fa-solid fa-leaf"></i> ECOPOINT</span>
+            <h2>UAJMS</h2>
+            <p>Universidad Autonoma Juan Misael Saracho</p>
+        </div>
+        <div class="header-badge-points">
+            <span id="global-points">0</span>
+            <small>EcoPuntos</small>
+        </div>
+    </header>
+
+    <main id="app-content" class="mobile-viewport"></main>
+
+    <nav class="bottom-nav">
+        <button class="nav-item active" data-view="campus">
+            <i class="fa-solid fa-map-location-dot"></i><span>Campus</span>
+        </button>
+        <button class="nav-item" data-view="coleccion">
+            <i class="fa-solid fa-boxes-stacked"></i><span>Coleccion</span>
+        </button>
+        <button class="nav-item" data-view="tienda">
+            <i class="fa-solid fa-shop"></i><span>Tienda</span>
+        </button>
+        <button class="nav-item" data-view="perfil">
+            <i class="fa-solid fa-user"></i><span>Perfil</span>
+        </button>
+        <button class="nav-item" data-view="ranking">
+            <i class="fa-solid fa-trophy"></i><span>Ranking</span>
+        </button>
+    </nav>
+
+    <script src="https://cdn.jsdelivr.net/npm/jsqr@1.4.0/dist/jsQR.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+    <script src="js/config/supabase.js?v=8"></script>
+    <script src="js/config/collectibles.js?v=8"></script>
+    <script type="module" src="https://unpkg.com/@google/model-viewer/dist/model-viewer.min.js"></script>
+    <script src="js/modules/campus.js?v=8"></script>
+    <script src="js/modules/coleccion.js?v=8"></script>
+    <script src="js/modules/tienda.js?v=8"></script>
+    <script src="js/modules/perfil.js?v=8"></script>
+    <script src="js/modules/ranking.js?v=8"></script>
+    <script src="js/app.js?v=8"></script>
+
+    <div id="auth-modal" class="modal-overlay hidden">
+        <div class="modal-content">
+            <i class="fa-solid fa-leaf eco-logo-big"></i>
+            <h2>Bienvenido a EcoPoint</h2>
+            <p>Introduce tu nombre de usuario para empezar a reciclar.</p>
+            <input type="text" id="username-input" placeholder="Ej. JuanPerez23" autocomplete="off">
+            <button id="btn-register" class="btn-primary">Generar mi Codigo Eco</button>
+        </div>
+    </div>
+
+</body>
+</html>
